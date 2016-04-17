@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head lang="{{lang}}">
+<meta charset="utf8">
+<title>{{title}}</title>
+<meta name="viewport" content="width=device-width">
+{% set fontStylesheetHost = "https://fonts.googleapis.com" %}
+{% if fontExtended %}
+{% set fontStylesheetPath = "/css?family=Open+Sans|Roboto:300,500&subset=latin,latin-ext" %}
+{% else %}
+{% set fontStylesheetPath = "/css?family=Open+Sans|Roboto:300,500" %}
+{% endif %}
+<link rel="preload" as="style" href="{{fontStylesheetHost}}{{fontStylesheetPath}}">
+<link rel="preconnect" href="{{fontStylesheetHost}}">
+<script>
+document.documentElement.className = (/\b(?:Windows|Linux|Android|iPhone|iPad|iPod)\b/.test(navigator.userAgent) ? 'os-not-mac' : 'os-mac') + (/\bOS[_ ]X[_ ]10[._][3-7]\D/.test(navigator.userAgent) ? ' os-old-mac' : '');
+function ga(){ga.q.push(arguments)}
+ga.q=[];
+ga.l=+new Date;
+ga('create', 'UA-3088672-5', 'auto');
+ga('send', 'pageview');
+</script>
+{% block styles %}
+<link rel="stylesheet" href="style.css">
+{% endblock %}
+{% block extrastyles %}
+    {% if inlineStyle %}
+        <style>{{inlineStyle|safe}}</style>
+    {% elif inlineStyleFile %}
+        <link rel="stylesheet" href="{{inlineStyleFile}}">
+    {% endif %}
+{% endblock %}
+{% block head %}{% endblock %}
+</head>
+{% macro contact(label) %} <!-- htmlmin:ignore --> <a
+            class='email
+             href="mailto:me"
+            '
+            href
+            = '
+            &#x20;&#x6d;&#97;i&#108;&#x74;o&#x3a;%20&#37;&#55;0o&#x72;&#110;&#x65;%&#x36;&#x63;&#x25;&#x34;&#x30;&#x70;&#37;6&#102;%7&#x32;&#x6e;e%&#x36;c&#37;2en&#x65;t?
+            '>{{label}}</a><!-- htmlmin:ignore -->{% endmacro %}
+<body>
+
+{% block header %}
+<header id="header" {% if 'mac' == current %}class="mac"{% endif %}>
+<nav>
+    <h1><a href="/"><img src="/icon.png" srcset="/icon@2x.png 2x" width="32" height="32" alt=""> ImageOptim</a></h1>
+    <a {% if 'mac' == current %}class="current"{% endif %} href="/mac">
+    {% block topMacApp %}
+    Mac <span>app</span>
+    {% endblock %}
+    </a>
+    {% if 'other' == current %}
+    <a class="current">Other <span>versions</span></a>
+    {% else %}
+    <a href="/mozjpeg"><span>MozJPEG</span> online</a>
+    {% endif %}
+</nav>
+<div class="hero {% if not largeHeader %}compact{% endif %}"><div>
+    <h2>
+    {% block h2 %}
+    {% if not largeHeader %}<a href="/mac">{% endif %}
+    <span class="brand">ImageOptim</span> makes images load faster
+    {% endblock %}
+    {% if not largeHeader %}</a>{% endif %}
+    </h2>
+    <p class="sub">
+    {% block h2sub %}
+    Removes bloated metadata. Saves disk&nbsp;space &amp;&nbsp;bandwidth by compressing images without&nbsp;losing&nbsp;quality.
+    {% endblock %}
+    </p>
+    {% if largeHeader %}
+    <div class=download>
+        <div>
+            <a class="now" download href="/ImageOptim.tbz2" rel="nofollow">
+                {% block downloadbutton %}
+                Download for <span class="not-mac">Mac</span> <span class="mac-only">Free</span>
+                {% endblock %}
+            </a>
+            <a href="/changelog.html">
+                {% block otherbutton %}
+                <span class="not-mac">See alternative</span>
+                <span class="mac-only">Other</span> versions
+                {% endblock %}
+            </a>
+        </div>
+        <p class="notes">
+        {% block requirements %}
+        Requires OS X 10.8+. It's <a href="https://github.com/ImageOptim/ImageOptim">Free and Open Source</a>. <a href="/donate.html">Donate</a>.
+        {% endblock %}
+        </p>
+        <p class="alternate not-mac">Not using a Mac? Check out <a href="https://trimage.org">Trimage</a></p>
+    </div>
+    {% endif %}
+    {% if 'mac' == current %}
+    {% if not largeHeader %}<a href="/mac">{% endif %}
+    <img class="screenshot" width="514" height="166" src="ImageOptim.png" srcset="ImageOptim@2x.png 2x" alt="{{"Simple drag'n'drop interface"|t}}">
+    {% if not largeHeader %}</a>{% endif %}
+    {% endif %}
+</div></div>
+</header>
+{% endblock %}
+
+{% block body %}{% endblock %}
+
+<footer id="footer"><div>
+<p>{{"Created by"|t}} <a rel=author href="https://kornel.ski" class="kornel">Kornel Lesiński</a>.  {{ contact("Contact"|t) }}. <a href="https://twitter.com/kornelski">{{"Follow on Twitter"|t}}</a>.
+{% block footerextra %}{% endblock %}
+</p>
+</div></footer>
+
+<script>
+document.body.addEventListener('click', function(e) {
+    var target = e.target;
+    while(target && target.tagName != 'A') {
+        target = target.parentNode;
+    }
+    if (!target) return;
+
+    if (target.hasAttribute('download')) {
+        localStorage.downloaded = Date.now()+3600*1000;
+        if (window.showThanks) {
+            showThanks(true);
+            setTimeout(function(){history.pushState({}, '', '/howto.html');}, 30000);
+        }
+        ga('send', 'pageview', '/download');
+        ga('send', 'event', 'download', target.pathname);
+    }
+}, false);
+</script>
+{% block bodyend %}{% endblock %}
+
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<link rel="stylesheet" href="{{fontStylesheetHost}}{{fontStylesheetPath}}">
+</body>

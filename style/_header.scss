@@ -1,0 +1,268 @@
+%bottomtriangle {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border: 10px solid;
+}
+
+#header > nav {
+    background: white;
+    position:-webkit-sticky;
+    position:sticky;
+    top:0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(#000,.25);
+    background-clip: padding-box;
+    margin-bottom: -1px;
+    h1 {
+        @media (min-width: 600px) { // Safari bug
+            flex: 1 0;
+        }
+        > a {
+            color: #333;
+            text-decoration: none;
+            &:hover {
+                color: #88a;
+                img {
+                    opacity: 0.9;
+                }
+            }
+        }
+        white-space: nowrap;
+        font-family: $logo-font;
+        font-weight: normal;
+        img {
+            vertical-align: -12%;
+        }
+    }
+    color: #777;
+    display: flex;
+    align-items: flex-end;
+    @media (min-width: 800px) {
+        &::after {
+            content: "";
+            flex: 0.5;
+        }
+    }
+    @media (min-width: 1000px) {
+        &::after {
+            content: "";
+            flex: 1;
+        }
+    }
+    > h1, > a {
+        padding: .25em .5em;
+        margin: 0;
+
+        font-size: 1.5em;
+        line-height: 2;
+    }
+    > a {
+        &:not(.current):not(:hover) {
+            overflow: hidden;
+        }
+        flex: 1;
+        @media (max-width: 800px) {
+            font-size: 1.4em;
+            line-height: 2.14;
+        }
+        @media (max-width: 555px) {
+            font-size: 1.2em;
+            line-height: 2.5;
+        }
+        @media (max-width: 470px) {
+            span {
+                display: none;
+            }
+        }
+        font-weight: 200;
+        color: #889;
+        &.current {
+            color: #556;
+            cursor: default;
+        }
+        position: relative;
+        &.current::before, &:hover::before {
+            @extend %bottomtriangle;
+            border-color: rgba(#000,.25) transparent transparent transparent;
+            margin: 1px 0 0 -9px;
+            border-width: 9px;
+        }
+        &.current::after, &:hover::after {
+            @extend %bottomtriangle;
+            border-color: white transparent transparent transparent;
+            margin-top: -1px;
+        }
+        &:hover:not(.current) {
+            color: #88a;
+            text-decoration: underline;
+            text-decoration-color: rgba(#88c,.25);
+        }
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+.hero {
+    > div {
+        @extend %maincol;
+    }
+    text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+    text-align: center;
+    padding: $header-padding 1em;
+    color: white;
+    background: #824;
+    $gradient: linear-gradient(#201,#5B0A2C,#6E0D36 15%,#AD1353 78%,#B70C54 83%,#C90B5D 91%,#F0237E);
+    background: url(squares.png) 50% 100%, $gradient;
+    @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+        background: url(squares@2x.png) 50% 100%, $gradient;
+        background-size: 200px 200px, auto;
+    }
+    @media (max-width: 1000px) {
+        background-size: 100px 100px, auto;
+    }
+    h2 {
+        font-size: 2.1em;
+        @media (max-width: 500px) {
+            font-size: 1.7em;
+        }
+        @media (min-width: 1500px) {
+            font-size: 2.5em;
+        }
+        font-weight:200;
+        margin: 1.1em 0 0;
+        > a {
+            color: inherit; text-decoration:none;
+            &:hover {
+                border-bottom: 1px solid rgba(#fff,.4);
+            }
+        }
+    }
+    &.compact {
+        h2 {
+            margin: 0.2em 0 0;
+        }
+        p {
+            margin: 0.5em 0;
+        }
+    }
+
+    .screenshot {
+        display: block;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 3px 30px rgba(#000,.3);
+        border-radius: 6px 6px 5px 5px;
+        opacity: 0.98;
+        @media (max-width: 600px) {
+            max-width: 90%;
+            height: auto !important;
+        }
+
+        // > div > .screenshot
+        margin: 1.88em auto (0 - $header-padding - 39px);
+        border: 1px solid rgba(#000,.5);
+        border-top-color: rgba(#000,.3);
+
+        background: #ddd;
+        color: #555;
+        text-shadow: none;
+        vertical-align: bottom;
+        line-height: 160px;
+    }
+    .mac & {
+        margin-bottom: $header-mac-margin-bottom;
+    }
+}
+
+//////// DL
+.hero .download {
+
+    margin: 3em 0 2em;
+    > img {
+        margin: 1em auto 2em;
+        opacity: 0.96;
+    }
+    > div {
+        display: flex;
+        justify-content: center;
+
+        > a {
+            @extend %button;
+            margin: 0 1em;
+            @media (max-width: 600px) {
+                margin: 0 0.75em;
+            }
+
+            .os-not-mac & {
+                background:#44d;
+                &:hover {
+                    background: #38a;
+                }
+            }
+        }
+        @media (max-width: 410px) {
+            flex-direction: column;
+            > .now {
+                margin-bottom: 1em;
+            }
+        }
+        > .now {
+            background: #199900;
+            .os-not-mac & {
+                background: rgba(#000, 0.1);
+                animation: none;
+            }
+
+            animation: blink 3s linear forwards;
+            box-shadow: 0 3px 10px rgba(#000,0.15);
+            &:hover {
+                animation: none;
+                background: #1b0;
+                border-color: rgba(#fff, 0.6);
+                box-shadow: 0 2px 4px rgba(#000,0.25);
+            }
+            &:active {
+                animation: none;
+                background: #2d1;
+                box-shadow: inset 0 1px 3px rgba(#000,0.5);
+                text-shadow: 0 -1px 0 rgba(#000,0.2);
+            }
+        }
+    }
+    .notes {
+        font-size: 0.8em;
+        > a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+    p {
+        color: #EEA5C0;
+        text-shadow: 0 1px 0 rgba(0,0,0,.3);
+    }
+    .alternate {
+        color: white;
+        a {
+        font-weight: normal;
+            text-decoration: underline;
+            color: #ddf;
+        }
+    }
+
+}
+
+@keyframes blink {
+    0%, 94%, 100% {
+        background: #199900;
+    }
+    97% {
+        background: #1d0;
+    }
+}

@@ -1,0 +1,42 @@
+
+<div lang="en" id="thanks" inert hidden style="display:none" class="hidden fade">
+    <div class="highlight">
+        <h2>Thanks for downloading!</h2>
+
+        <p>If you like ImageOptim, <a onclick="ga('send', 'event', 'donate', 'click', 'fromthanks');" href="donate.html">please donate</a> and <a href="https://github.com/pornel/ImageOptim">star the project on GitHub</a>.</p>
+    <p><a href="https://twitter.com/kornelski" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @kornelski</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://imageoptim.com" data-text="Crunching images!" data-via="kornelski" data-hashtags="perfmatters" data-dnt="true">Tweet</a></p>
+    </div>
+    <p><a href="/howto.html">See detailed installation and usage instructions</a>. In case the archive doesn't open, try <a href="http://wakaba.c3.cx/s/apps/unarchiver">The Unarchiver</a> (the non-AppStore version).</p>
+    <p>Try <a onclick="ga('send', 'event', 'pngmini', 'click', 'thanks');" href="https://pngmini.com">ImageAlpha</a>&hairsp;—&hairsp;my lossy <abbr>PNG</abbr> compressor that can compress <abbr>PNG</abbr>s <em>even more</em>.</p>
+</div>
+<script>
+function showThanks(anim){
+    setTimeout(function(){
+        var t = document.getElementById('thanks');
+        var c = document.getElementById('header');
+        if (!t || !c) return;
+        var faq = document.getElementById('faq');
+        if (faq) c.parentNode.insertBefore(faq, c.nextSibling);
+
+        var newsletter = document.getElementById('newsletter');
+        if (newsletter) c.parentNode.insertBefore(newsletter, c.nextSibling);
+
+        c.parentNode.insertBefore(t, c.nextSibling);
+
+        t.style.display = '';
+        t.removeAttribute('inert');
+        t.removeAttribute('hidden');
+        if (!anim) {t.className = 'fade';}
+        setTimeout(function(){
+            t.className = 'fade';
+        },0);
+    }, anim ? 500 : 0);
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+        js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+}
+try {
+    if (localStorage.downloaded > Date.now()) showThanks(false);
+} catch(e) {}
+</script>

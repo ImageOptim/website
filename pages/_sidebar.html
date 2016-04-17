@@ -1,0 +1,41 @@
+<aside id="sidebar">
+    <a rel="nofollow" download itemprop="downloadURL" class="download {% if sidebarDownload %}now{% endif %}" href="/ImageOptim.tbz2">{{'Download'|t}}</a>
+    <p class="download-info">
+        {{"Version"|t}} 1.6.0
+        <br /><span itemprop="requiredFeatures" title="{{'Compatible with El Capitan'|t}}" i18n:attributes="title">Mac OS X 10.8+</span>
+    </p>
+
+    <ul class="links">
+        <li><a download rel="nofollow" href="/ImageOptim{{betaVersion}}.tar.bz2" class="beta"><strong>{{'Beta build'|t}}</strong> {{betaVersion}}</span></a></li>
+        <li><a href="/changelog.html" itemprop="versionChanges" class="changelog">{{'Changelog'|t}}</a></li>
+        <li><a rel="nofollow" download href="/ImageOptim1.5.4.tar.bz2" class="older">{{'Old Mac? Download for'|t}} <strong>Snow Leopard &amp; Lion (10.6-7)</strong></span></a></li>
+        <li><a href="https://github.com/ImageOptim/ImageOptim/issues" class="bugs">{{'Bugs'|t}}</a></li>
+        <li><a href="https://github.com/ImageOptim/ImageOptim" class="source">{{'Source code'|t}}</a></li>
+        <li><a href="/donate.html" class="donate">{{'Donate'|t}}</a></li>
+    </ul>
+    {% if sidebarLangs %}
+    <p class="langs">
+        <b>{{"Available in:"|t}}</b><br />
+        <a href="/mac" rel="alternate" hreflang="en">{{'English'|t}}</a>,
+        <a href="/fr.html" rel="alternate" hreflang="fr">{{'French'|t}}</a>,
+        <a hreflang="de">{{'German'|t}}</a>,
+        <a href="/es.html" rel="alternate" hreflang="es">{{'Spanish'|t}}</a>,
+        <a href="/pt.html" rel="alternate" hreflang="pt">{{'Portuguese'|t}}</a>,
+        <a href="/it.html" hreflang="it">{{'Italian'|t}}</a>,
+        <a hreflang="nl">{{'Dutch'|t}}</a>,
+        <a hreflang="no">{{'Norwegian'|t}}</a>,
+        <a hreflang="sv">{{'Swedish'|t}}</a>,
+        <a hreflang="da">{{'Danish'|t}}</a>,
+        <a hreflang="ja">{{'Japanese'|t}}</a>,
+        <a hreflang="zh-TW">{{'Chinese'|t}}</a>,
+        <a hreflang="ko">{{'Korean'|t}}</a>,
+        <a hreflang="ko">{{'Vietnamese'|t}}</a>,
+        <a hreflang="tr">{{'Turkish'|t}}</a>,
+        <a hreflang="ru">{{'Russian'|t}}</a>,
+        <a hreflang="lt">{{'Lithuanian'|t}}</a>,
+        <a hreflang="cs">{{'Czech'|t}}</a>
+        <a href="/pl.html" rel="alternate" hreflang="pl">{{'and Polish'|t}}</a>.
+        <a href="https://www.transifex.com/projects/p/imageoptim/" rel="nofollow">{{'Help translate it!'|t}}</a>
+    </p>
+    {% endif %}
+</aside>

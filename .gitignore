@@ -1,0 +1,4 @@
+node_modules/
+public/*.css
+public/*.html
+public/*.gz

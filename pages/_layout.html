@@ -35,7 +35,20 @@ ga('send', 'pageview');
     {% endif %}
 {% endblock %}
 {% block head %}{% endblock %}
+
+<meta name="og:title" content="{{title}}" />
+<meta name="og:site_name" content="ImageOptim" />
+<meta name="og:image" content="/ImageOptimIcon.png" />
+<meta name="og:image:width" content="256" />
+<meta name="og:image:height" content="256" />
+<meta name="og:image" content="/ImageOptimShare.jpg" />
+<meta name="og:image:width" content="703" />
+<meta name="og:image:height" content="255" />
+<link rel="author" href="https://kornel.ski"/>
+<link rel="payment" href="https://flattr.com/submit/auto?url=https://imageoptim.com&amp;user_id=pornel&amp;title=ImageOptim" type="text/html" />
+
 </head>
+
 {% macro contact(label) %}<!-- htmlmin:ignore --><a
 class='email
 href="mailto:x@y.com"
@@ -46,6 +59,7 @@ href
 '
 >{{label}}</a
 ><!-- htmlmin:ignore -->{% endmacro %}
+
 <body>
 
 {% block header %}

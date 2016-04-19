@@ -172,8 +172,18 @@
         vertical-align: bottom;
         line-height: 160px;
     }
+    margin: 0 0 2em;
     .mac & {
         margin-bottom: $header-mac-margin-bottom;
+    }
+
+    .brand abbr {
+        background: white;
+        color: #914;
+        text-shadow: 0 -1px 0 rgba(#300,.8);
+        padding: 0 0.5ex 0 0.46ex;
+        border-radius: 4px;
+        box-shadow: 0 1px 0 rgba(#000,.5);
     }
 }
 
@@ -196,7 +206,7 @@
                 margin: 0 0.75em;
             }
 
-            .os-not-mac & {
+            .os-not-mac &.alt {
                 background:#44d;
                 &:hover {
                     background: #38a;
@@ -211,7 +221,7 @@
         }
         > .now {
             background: #199900;
-            .os-not-mac & {
+            .os-not-mac &.for-mac {
                 background: rgba(#000, 0.1);
                 animation: none;
             }

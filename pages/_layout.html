@@ -71,15 +71,16 @@ href
     Removes bloated metadata. Saves disk&nbsp;space &amp;&nbsp;bandwidth by compressing images without&nbsp;losing&nbsp;quality.
     {% endblock %}
     </p>
+    {% block cta %}
     {% if largeHeader %}
     <div class=download>
         <div>
-            <a class="now" download href="/ImageOptim.tbz2" rel="nofollow">
+            <a class="for-mac now" download href="/ImageOptim.tbz2" rel="nofollow">
                 {% block downloadbutton %}
                 Download for <span class="not-mac">Mac</span> <span class="mac-only">Free</span>
                 {% endblock %}
             </a>
-            <a href="/versions.html">
+            <a class="alt" href="/versions.html">
                 {% block otherbutton %}
                 <span class="not-mac">See alternative</span>
                 <span class="mac-only">Other</span> versions
@@ -93,6 +94,7 @@ href
         </p>
     </div>
     {% endif %}
+    {% endblock %}
     {% if 'mac' == current %}
     {% if not largeHeader %}<a href="/mac">{% endif %}
     <img class="screenshot" width="514" height="166" src="ImageOptim.png" srcset="ImageOptim@2x.png 2x" alt="{{"Simple drag'n'drop interface"|t}}">

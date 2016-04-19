@@ -126,5 +126,5 @@ body > #thanks, body > #faq { // a bit of a hack
 
 .about-pngout {
     font-size: 0.86em; color: #888;
-    a:not(:hover) {color:inherit}
+    a:not(:hover) {color:inherit; text-decoration-color: rgba(#aaa,.5)}
 }

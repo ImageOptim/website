@@ -8,14 +8,6 @@
     See how it's made: https://github.com/ImageOptim/website
 
 -->
-{% set fontStylesheetHost = "https://fonts.googleapis.com" %}
-{% if fontExtended %}
-{% set fontStylesheetPath = "/css?family=Open+Sans|Roboto:300,500&subset=latin,latin-ext" %}
-{% else %}
-{% set fontStylesheetPath = "/css?family=Open+Sans|Roboto:300,500" %}
-{% endif %}
-<link rel="preload" as="style" href="{{fontStylesheetHost}}{{fontStylesheetPath}}">
-<link rel="preconnect" href="{{fontStylesheetHost}}">
 <script>
 document.documentElement.className = (/\b(?:Windows|Linux|Android|iPhone|iPad|iPod)\b/.test(navigator.userAgent) ? 'os-not-mac' : 'os-mac') + (/\bOS[_ ]X[_ ]10[._][3-7]\D/.test(navigator.userAgent) ? ' os-old-mac' : '');
 function ga(){ga.q.push(arguments)}
@@ -24,6 +16,7 @@ ga.l=+new Date;
 ga('create', 'UA-3088672-5', 'auto');
 ga('send', 'pageview');
 </script>
+<style>{{inlineFontsStyle|safe}}</style>
 {% block styles %}
 <link rel="stylesheet" href="style.css">
 {% endblock %}
@@ -153,5 +146,4 @@ document.body.addEventListener('click', function(e) {
 {% block bodyend %}{% endblock %}
 
 <script async src='https://www.google-analytics.com/analytics.js'></script>
-<link rel="stylesheet" href="{{fontStylesheetHost}}{{fontStylesheetPath}}">
 </body>

@@ -88,6 +88,7 @@ gulp.task('pages', defaultProps.dev ? [] : ['css'], function() {
             if (!props.dev && props.inlineStyleFile) {
                 props.inlineStyle = fs.readFileSync(`public/${props.inlineStyleFile}`);
             }
+            props.inlineFontsStyle = fs.readFileSync('style/_fonts.css');
 
             const txt = yaml.safeLoad(fs.readFileSync(`pages/_${props.lang}.yaml`));
 

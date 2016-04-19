@@ -46,21 +46,21 @@
         }
     }
     .bugs, .source {
-        background-image: url(/changelog.png);
+        background-image: url(/changelog.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/changelog@2x.png);
+            background-image: url(/changelog@2x.png?embed);
         }
     }
     .changelog {
-        background-image: url(/older.png);
+        background-image: url(/older.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/older@2x.png);
+            background-image: url(/older@2x.png?embed);
         }
     }
     .donate {
-        background-image: url(/donate.png);
+        background-image: url(/donate.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/donate@2x.png);
+            background-image: url(/donate@2x.png?embed);
         }
     }
     .older {
@@ -76,9 +76,9 @@
         }
     }
     .beta, .older {
-        background-image: url(/download.png);
+        background-image: url(/download.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/download@2x.png);
+            background-image: url(/download@2x.png?embed);
         }
     }
     .langs a:not(:hover) {

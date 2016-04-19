@@ -4,6 +4,7 @@ const exec         = require('child_process').exec;
 const browserSync  = require('browser-sync').create();
 const each         = require('gulp-each');
 const sass         = require('gulp-sass');
+const inlineimages = require('gulp-css-inline-images');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss     = require('gulp-clean-css');
 const zopfli       = require('gulp-zopfli');
@@ -56,6 +57,9 @@ gulp.task('css', function() {
     return gulp.src("style/[a-z]*.scss")
         .pipe(sass())
         .pipe(autoprefixer())
+        .pipe(inlineimages({
+            webRoot: 'public',
+        }))
         .pipe(cleancss({
             rebase:false,
         }))

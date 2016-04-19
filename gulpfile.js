@@ -51,7 +51,7 @@ gulp.task('css', function() {
 });
 
 gulp.task('compress', ['css', 'pages'], function() {
-    return gulp.src(["public/style.css", "public/index.html"])
+    return gulp.src(["public/style.css", "public/*.html"])
         .pipe(zopfli())
         .pipe(gulp.dest("public/"))
 });

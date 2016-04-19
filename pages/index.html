@@ -4,6 +4,15 @@
 {% block styles %}
 {# none (all inline) #}
 {% endblock %}
+{% block head %}
+{% if lang != 'en' %}<link rel="alternate" hreflang="en" href="/">{% endif %}
+{% if lang != 'pl' %}<link rel="alternate" hreflang="pl" href="/pl.html">{% endif %}
+{% if lang != 'be' %}<link rel="alternate" hreflang="be" href="/be.html">{% endif %}
+{% if lang != 'fr' %}<link rel="alternate" hreflang="fr" href="/fr.html">{% endif %}
+{% if lang != 'pt-br' %}<link rel="alternate" hreflang="pt-br" href="/pt-br.html">{% endif %}
+{% if lang != 'pt-pt' %}<link rel="alternate" hreflang="pt-pt" href="/pt.html">{% endif %}
+
+{% endblock %}
 {% block body %}
 
 <section id="features">

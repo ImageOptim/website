@@ -21,7 +21,19 @@ gulp.task('watch', ['css-browsersync', 'pages'], function() {
     gulp.watch("gulpfile.js").on("change", () => process.exit(0));
 
     browserSync.init({
-        server: "./public"
+        server: {
+            baseDir: "./public",
+            serveStaticOptions: {
+                extensions: ['html']
+            },
+            middleware: [
+                function(req, res, next){
+                    if (req.url !== '/') return next();
+                    res.writeHead(301, {'Location':'/mac'});
+                    res.end();
+                },
+            ],
+        },
     });
 
     gulp.watch("style/*.scss", ['css-browsersync']);

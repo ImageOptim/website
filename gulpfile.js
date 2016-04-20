@@ -97,7 +97,7 @@ gulp.task('pages', defaultProps.dev ? [] : ['css'], function() {
                 if ('string' === typeof translated) {
                     return translated;
                 }
-                if (props.lang != 'en') console.error(`Untranslated '${t}'`);
+                if (props.lang != 'en') console.error(`Untranslated '${t}': ${props.lang}`);
                 return t;
             });
 

@@ -106,7 +106,7 @@ body > #newsletter {
 #header + #newsletter {
     margin: 0 0 2em;
 }
-#header.mac + #newsletter {
+#header.withimage + #newsletter {
     margin-top: -$header-mac-margin-bottom;
     padding-top: $header-mac-margin-bottom;
     h2 {margin-top:0}

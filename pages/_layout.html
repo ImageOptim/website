@@ -57,7 +57,7 @@ href
 <body>
 
 {% block header %}
-<header id="header" {% if 'mac' == current %}class="mac"{% endif %}>
+<header id="header" {% if 'mac' == current %}class="withimage"{% endif %}>
 <nav>
     <h1><a href="/"><img src="/icon.png" srcset="/icon@2x.png 2x" width="32" height="32" alt=""> ImageOptim</a></h1>
     <a {% if 'mac' == current %}class="current"{% else %}href="/mac"{% endif %}>

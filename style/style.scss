@@ -75,13 +75,22 @@ body > main {
     @extend %maincol;
 }
 
+@mixin semiboldfont {
+    font-family: $logo-font;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.brand {
+    @include semiboldfont;
+}
+
 @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-    .brand, strong {
-        font-family: $logo-font;
-        font-style: normal;
-        font-weight: normal;
+    strong {
+        @include semiboldfont;
     }
 }
+
 p.warning {
     background: #ffe;
     padding: 1em;

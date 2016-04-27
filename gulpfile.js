@@ -1,6 +1,5 @@
 'use strict';
 const gulp         = require('gulp');
-const exec         = require('child_process').exec;
 const browserSync  = require('browser-sync').create();
 const each         = require('gulp-each');
 const sass         = require('gulp-sass');
@@ -38,8 +37,9 @@ gulp.task('watch', ['css-browsersync', 'pages'], function() {
     });
 
     gulp.watch("style/*.scss", ['css-browsersync']);
+    gulp.watch("js/*.js", ['js']);
     gulp.watch("pages/*.{html,yaml}", ['pages']);
-    gulp.watch("public/*.html").on('change', browserSync.reload);
+    gulp.watch("public/*.{js,html}").on('change', browserSync.reload);
 });
 
 gulp.task('css-browsersync', function() {
@@ -63,6 +63,11 @@ gulp.task('css', function() {
         .pipe(cleancss({
             rebase:false,
         }))
+        .pipe(gulp.dest("public/"))
+});
+
+gulp.task('js', function() {
+    return gulp.src("js/[a-z]*.js")
         .pipe(gulp.dest("public/"))
 });
 

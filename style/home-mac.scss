@@ -1,0 +1,21 @@
+@import "style.scss";
+@import "home.scss";
+@import "quotes.scss";
+
+
+// thanks
+//
+
+body > #thanks, body > #faq { // a bit of a hack
+    @extend %maincol;
+}
+#faq + #features {
+    margin-top: 2em;
+    border-top: 1px solid #eee;
+    padding-top: 2em;
+}
+
+.about-pngout {
+    font-size: 0.86em; color: #888;
+    a:not(:hover) {color:inherit; text-decoration-color: rgba(#aaa,.5)}
+}

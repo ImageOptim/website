@@ -1,4 +1,3 @@
-@import "style.scss";
 
 #features {
     @extend %maincol;
@@ -27,38 +26,6 @@
         font-size: 1.3em;
         color: #666;
         @media (min-width: 600px) {
-            white-space: nowrap;
-        }
-    }
-}
-
-.quotes {
-    div {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    background: #F8F9FA;
-    color: #6F7891;
-    overflow: hidden;
-    padding: 1em;
-    margin: 0 0 2em;
-    blockquote {
-        text-align: left;
-        vertical-align: bottom;
-        max-width: 28em;
-        min-width: 12em;
-        flex:1;
-        -webkit-flex: 1 1 15em;
-        margin: 0 2em;
-        @media (max-width: 800px) {
-            margin: 0 1em;
-        }
-        padding: 0;
-        page-break-inside: avoid;
-        a:not(:hover) {
-            color: #448;
-            text-decoration: none;
             white-space: nowrap;
         }
     }
@@ -102,7 +69,6 @@ body > #newsletter {
     }
 }
 
-
 #header + #newsletter {
     margin: 0 0 2em;
 }
@@ -110,22 +76,4 @@ body > #newsletter {
     margin-top: -$header-mac-margin-bottom;
     padding-top: $header-mac-margin-bottom;
     h2 {margin-top:0}
-}
-
-// thanks
-//
-
-body > #thanks, body > #faq { // a bit of a hack
-    @extend %maincol;
-}
-#faq + #features {
-    margin-top: 2em;
-    border-top: 1px solid #eee;
-    padding-top: 2em;
-}
-
-
-.about-pngout {
-    font-size: 0.86em; color: #888;
-    a:not(:hover) {color:inherit; text-decoration-color: rgba(#aaa,.5)}
 }

@@ -10,7 +10,7 @@
 -->
 <script>
 document.documentElement.className = 'has-js ' + (function(ua){
-    if (/\b(?:Linux|Android|iPhone|iPad|iPod)\b/.test(ua)) {
+    if (/\b(?:Linux|Android|iPhone|iP[ao]d|Windows )\b/.test(ua)) {
         return 'os-not-mac' + (/\bWindows\b/.test(ua) ? ' os-win' : '');
     }
     return 'os-mac' + (/\bOS[_ ]X[_ ]10[._][3-7]\D/.test(ua) ? ' os-old-mac' : '');

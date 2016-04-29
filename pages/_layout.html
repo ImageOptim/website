@@ -55,7 +55,7 @@ href
 ><!-- htmlmin:ignore -->{% endmacro %}
 
 <body>
-
+{% if inlineStyle %}<!-- htmlmin:ignore -->{# this is to load Roboto font first #}<p style="position:absolute;top:0;left:0">&nbsp;<b>&nbsp;</b></p><!-- htmlmin:ignore -->{% endif %}
 {% block header %}
 <header id="header" {% if 'mac' == current %}class="withimage"{% endif %}>
 <nav>

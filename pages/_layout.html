@@ -9,10 +9,15 @@
 
 -->
 <script>
-document.documentElement.className = (/\b(?:Windows|Linux|Android|iPhone|iPad|iPod)\b/.test(navigator.userAgent) ? 'os-not-mac' : 'os-mac') + (/\bOS[_ ]X[_ ]10[._][3-7]\D/.test(navigator.userAgent) ? ' os-old-mac' : '');
+document.documentElement.className = 'has-js ' + (function(ua){
+    if (/\b(?:Linux|Android|iPhone|iPad|iPod)\b/.test(ua)) {
+        return 'os-not-mac' + (/\bWindows\b/.test(ua) ? ' os-win' : '');
+    }
+    return 'os-mac' + (/\bOS[_ ]X[_ ]10[._][3-7]\D/.test(ua) ? ' os-old-mac' : '');
+})(navigator.userAgent);
 function ga(){ga.q.push(arguments)}
 ga.q=[];
-ga.l=+new Date;
+ga.l=Date.now();
 ga('create', 'UA-3088672-5', 'auto');
 ga('send', 'pageview');
 </script>

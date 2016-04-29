@@ -31,6 +31,14 @@ main > section {
         order: 5;
     }
 }
+.os-win {
+    #osx {
+        order: 5;
+    }
+    #windows {
+        order: -1;
+    }
+}
 
 #windows h3 {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAMFBMVEVHcEwArO8Are8AruwAre8AsPIArO8Are8Are8Are8AqfEAre8Are8Are8Are8Are989nuoAAAAD3RSTlMAkdoYZhPSo1XtBz+3JnlHQKnMAAAA00lEQVR42u3XyxKDIAxAUaK8Agj//7dVK2BLpxiccZW7z2HCLmIwtXgbjUYQ1Ny8eAkmTJi2gDgZ82TuCuDU1yQB2BcNukz2gfqmlU6okHrB7z01YppmoXQfOD8J5z2vAvuaEHSZJAOYJ0eBlBhggAEGGMiAOYLvohJOxjVZszX/bhG3c0fDQMiZc8cKVvbyfz9xnlIvYIABBh4BNAPqEWDCm0A9McaAcuSUu2EM+HTM6hCB9ka0dju6EClAW14McQxoP6gDkJ0KUB25f3QDkJ1o5AuBtrO8tVzg2AAAAABJRU5ErkJggg==) no-repeat 0 50%;

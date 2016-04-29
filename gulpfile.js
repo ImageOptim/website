@@ -21,6 +21,7 @@ gulp.task('watch', ['css-browsersync', 'pages'], function() {
     gulp.watch("gulpfile.js").on("change", () => process.exit(0));
 
     browserSync.init({
+        port: 4444,
         server: {
             baseDir: "./public",
             serveStaticOptions: {

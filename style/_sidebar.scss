@@ -48,19 +48,19 @@
     .bugs, .source {
         background-image: url(/changelog.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/changelog@2x.png?embed);
+            background-image: url(/changelog@2x.png);
         }
     }
     .changelog {
         background-image: url(/older.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/older@2x.png?embed);
+            background-image: url(/older@2x.png);
         }
     }
     .donate {
         background-image: url(/donate.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/donate@2x.png?embed);
+            background-image: url(/donate@2x.png);
         }
     }
     .older {
@@ -78,7 +78,7 @@
     .beta, .older {
         background-image: url(/download.png?embed);
         @media (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
-            background-image: url(/download@2x.png?embed);
+            background-image: url(/download@2x.png);
         }
     }
     .langs a:not(:hover) {

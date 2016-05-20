@@ -48,13 +48,13 @@ ga('send', 'pageview');
 
 </head>
 
-{% macro contact(label) %}<!-- htmlmin:ignore --><a
+{% macro contact(label,subject = 'ImageOptim') %}<!-- htmlmin:ignore --><a
 class='email
 href="mailto:x@y.com"
 '
 href
  =  '
-&#x20;&#109;&#x61;&#105;l&#x74;o&#58;&#37;&#x32;&#x30;%6&#98;&#37;6&#x66;&#x72;&#37;&#x36;e&#101;&#x6C;&#37;40i%&#x36;d&#x25;&#x36;1%6&#x37;eo&#x70;&#x74;&#x69;&#37;6&#100;%2e%63%6&#x66;&#x6D;?
+&#x20;&#109;&#x61;&#105;l&#x74;o&#58;&#37;&#x32;&#x30;%6&#98;&#37;6&#x66;&#x72;&#37;&#x36;e&#101;&#x6C;&#37;40i%&#x36;d&#x25;&#x36;1%6&#x37;eo&#x70;&#x74;&#x69;&#37;6&#100;%2e%63%6&#x66;&#x6D;?subject={{subject|urlencode}}
 '
 >{{label}}</a
 ><!-- htmlmin:ignore -->{% endmacro %}
@@ -125,7 +125,7 @@ href
 {% block body %}{% endblock %}
 
 <footer id="footer"><div>
-<p>{{"Created by"|t}} <a rel=author href="https://kornel.ski" class="kornel">Kornel Lesiński</a>.  {{ contact("Contact"|t) }}. <a href="https://twitter.com/kornelski">{{"Follow on Twitter"|t}}</a>.
+<p>{{"Created by"|t}} <a rel=author href="https://kornel.ski" class="kornel">Kornel Lesiński</a>.  {{ contact("Contact"|t , 'ImageOptim website') }}. <a href="https://twitter.com/kornelski">{{"Follow on Twitter"|t}}</a>.
 {% block footerextra %}{% endblock %}
 </p>
 </div></footer>

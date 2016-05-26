@@ -13,7 +13,7 @@
             padding-right: 0.5em;
         }
         @media (min-width: 600px) {
-            flex: 1;
+            flex: 1 15em; /* 15em is Safari bug */
         }
         strong {
             font-family: inherit;

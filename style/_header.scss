@@ -220,7 +220,7 @@
             }
         }
         > .now {
-            background: #199900;
+            background: $button-bg-green;
             .os-not-mac &.for-mac {
                 background: rgba(#000, 0.1);
                 animation: none;
@@ -230,7 +230,7 @@
             box-shadow: 0 3px 10px rgba(#000,0.15);
             &:hover {
                 animation: none;
-                background: #1b0;
+                background: $button-bg-green-hover;
                 border-color: rgba(#fff, 0.6);
                 box-shadow: 0 2px 4px rgba(#000,0.25);
             }

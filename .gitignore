@@ -3,3 +3,4 @@ public/*.css
 public/*.html
 public/*.gz
 public/*.js
+yarn.lock

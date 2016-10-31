@@ -7,7 +7,7 @@
 
     <ul class="links">
         <li><a href="/changelog.html" itemprop="versionChanges" class="changelog">{{'Changelog'|t}}</a></li>
-        <li><a download rel="nofollow" href="/ImageOptim{{betaVersion}}.tar.bz2" class="beta"><strong>{{'Beta build'|t}}</strong> {{betaVersion}}</span></a></li>
+        {% if betaVersion %}<li><a download rel="nofollow" href="/ImageOptim{{betaVersion}}.tar.bz2" class="beta"><strong>{{'Beta build'|t}}</strong> {{betaVersion}}</span></a></li>{% endif %}
         <li><a rel="nofollow" download href="/ImageOptim1.5.4.tar.bz2" class="older">{{'Old Mac? Download for'|t}} <strong>Snow Leopard &amp; Lion (10.6-7)</strong></span></a></li>
         <li><a href="https://github.com/ImageOptim/ImageOptim/issues" class="bugs">{{'Bugs'|t}}</a></li>
         <li><a href="https://github.com/ImageOptim/ImageOptim" class="source">{{'Source code'|t}}</a></li>

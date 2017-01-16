@@ -20,6 +20,25 @@
     <section id="changelog">
         <h2><a href="/mac">ImageOptim</a> Changelog</h2>
           <section>
+            <h3 id="v1.7.0"><a download href="/ImageOptim1.7.0a3.tar.bz2" rel="nofollow">1.7.0a3</a></h3>
+            <p>Warning! This is an unstable preview version of ImageOptim and it may be buggy!</p>
+            <ul>
+                <li><p><abbr>SVG</abbr> optimizations via <abbr><a href="https://github.com/svg/svgo">SVGO</a></abbr>.</p>
+                <ul><li>In this alpha build you <strong>must</strong> have <a href="https://nodejs.org/en/">Node.js 7</a> installed in <code>/usr/local/bin/node</code> and enable <abbr>SVGO</abbr> in ImageOptim's Preferences first.
+                <li><abbr>SVGO</abbr> works best if you enable <samp>Lossy</samp> mode.</li></ul>
+                <li><p>Big under-the-hood changes in handling of file inputs and outputs. Affected areas:</p>
+            <ul>
+                <li>Display of unoptimized and optimized file sizes (BTW, now % optimized is shown only when some optimizations were done)</li>
+                <li>Restarting optimizations again.</li>
+                <li>Reverting to original.</li>
+                <li>Cleanup of temp files.</li>
+            </ul>
+            <p><a href="https://github.com/ImageOptim/ImageOptim/issues">Please report bugs</a> if you see something strange happening. Please include log from Console.app.</p>
+            </li>
+            </ul>
+            <p class="smallprint">This version requires at least macOS&nbsp;10.9 (Mavericks), and full functionality is only available in macOS&nbsp;10.10 (Yosemite) or later.</p>
+          </section>
+          <section>
             <h3 id="v1.6.5"><a download href="/ImageOptim1.6.5.tar.bz2" rel="nofollow">1.6.5</a></h3>
             <ul>
                 <li>Fixed Apple Mail extension code-signing issue.</li>

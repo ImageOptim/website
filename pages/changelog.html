@@ -20,21 +20,12 @@
     <section id="changelog">
         <h2><a href="/mac">ImageOptim</a> Changelog</h2>
           <section>
-            <h3 id="v1.7.0"><a download href="/ImageOptim1.7.0a3.tar.bz2" rel="nofollow">1.7.0a3</a></h3>
-            <p>Warning! This is an unstable preview version of ImageOptim and it may be buggy!</p>
+            <h3 id="v1.7.0"><a download href="/ImageOptim1.7.0.tar.bz2" rel="nofollow">1.7.0</a></h3>
             <ul>
                 <li><p><abbr>SVG</abbr> optimizations via <abbr><a href="https://github.com/svg/svgo">SVGO</a></abbr>.</p>
-                <ul><li>In this alpha build you <strong>must</strong> have <a href="https://nodejs.org/en/">Node.js 7</a> installed in <code>/usr/local/bin/node</code> and enable <abbr>SVGO</abbr> in ImageOptim's Preferences first.
-                <li><abbr>SVGO</abbr> works best if you enable <samp>Lossy</samp> mode.</li></ul>
-                <li><p>Big under-the-hood changes in handling of file inputs and outputs. Affected areas:</p>
-            <ul>
-                <li>Display of unoptimized and optimized file sizes (BTW, now % optimized is shown only when some optimizations were done)</li>
-                <li>Restarting optimizations again.</li>
-                <li>Reverting to original.</li>
-                <li>Cleanup of temp files.</li>
-            </ul>
-            <p><a href="https://github.com/ImageOptim/ImageOptim/issues">Please report bugs</a> if you see something strange happening. Please include log from Console.app.</p>
-            </li>
+                    <ul><li>You <strong>must</strong> have <a href="https://nodejs.org/en/">Node.js 7</a> installed and enable <abbr>SVGO</abbr> in ImageOptim's Preferences first.</li>
+                    <li><abbr>SVGO</abbr> works best if you enable <samp>Lossy</samp> mode.</li></ul></li>
+                <li><p>Big under-the-hood changes in handling of file inputs and outputs.</p></li>
             </ul>
             <p class="smallprint">This version requires at least macOS&nbsp;10.9 (Mavericks), and full functionality is only available in macOS&nbsp;10.10 (Yosemite) or later.</p>
           </section>
@@ -45,7 +36,7 @@
                 <li>Fixed stripping of color profiles when AdvPNG is enabled.</li>
                 <li>Updated Sparkle updater (auto-updates are much faster now).</li>
             </ul>
-            <p class="smallprint">This version requires at least macOS&nbsp;10.8 (Mountain Lion), and full functionality is only available in macOS&nbsp;10.10 (Yosemite) or later.</p>
+            <p class="warning">This is the last version that supports macOS&nbsp;10.8 (Mountain Lion)</p>
           </section>
           <section>
             <h3 id="v1.6.4"><a download href="/ImageOptim1.6.4.tar.bz2" rel="nofollow">1.6.4</a></h3>

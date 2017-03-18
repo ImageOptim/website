@@ -13,7 +13,7 @@ document.documentElement.className = 'has-js ' + (function(ua){
     if (/\b(?:Linux|Android|iPhone|iP[ao]d|Windows )\b/.test(ua)) {
         return 'os-not-mac' + (/\bWindows\b/.test(ua) ? ' os-win' : '');
     }
-    return 'os-mac' + (/\bOS[_ ]X[_ ]10[._][3-7]\D/.test(ua) ? ' os-old-mac' : '');
+    return 'os-mac' + (/\bOS[_ ]X[_ ]10[._][5-8]\D/.test(ua) ? ' os-old-mac' : '');
 })(navigator.userAgent);
 function ga(){ga.q.push(arguments)}
 ga.q=[];
@@ -107,7 +107,7 @@ href
         </div>
         <p class="notes">
         {% block requirements %}
-        Requires macOS 10.8+. It's <a href="https://github.com/ImageOptim/ImageOptim">Free and Open Source</a>. <a href="/donate.html">Donate</a>.
+        Requires macOS 10.9+. It's <a href="https://github.com/ImageOptim/ImageOptim">Free and Open Source</a>. <a href="/donate.html">Donate</a>.
         {% endblock %}
         </p>
     </div>

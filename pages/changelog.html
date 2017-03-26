@@ -20,16 +20,17 @@
     <section id="changelog">
         <h2><a href="/mac">ImageOptim</a> Changelog</h2>
           <section>
-            <h3 id="v1.7.1"><a download href="/ImageOptim1.7.1a4.tar.bz2" rel="nofollow">1.7.1a4</a></h3>
+            <h3 id="v1.7.1"><a download href="/ImageOptim{{betaVersion|default(currentVersion,true)}}.tar.bz2" rel="nofollow">{{betaVersion|default(currentVersion,true)}}</a></h3>
             <ul>
                 <li>Added experimental Guetzli optimizer.
                     <ul>
-                        <li>It's off by default (enable in <samp>Preferences</samp>), because it's <strong>very slow</strong>: 1 minute + 300MB RAM per megapixel. It is normal for a large photo to take 30 minutes and gigabytes of memory.</li>
+                        <li>It's off by default (enable in <samp>Preferences</samp>), because it's <strong>very slow</strong>: 1 minute + 200MB RAM per megapixel. It is normal for a large photo to take 10 minutes and gigabytes of memory.</li>
                         <li>It's ineffective on JPEGs with quality 85 or lower. It's best to create JPEGs with 100% quality for running Guetzli on them.</li>
                         <li>Guetzli does not support color profiles, so <a href="/color-profiles.html">only use sRGB</a>.</li>
                         <li>Running Guetzli on the same image twice is not recommended, as it will decrease quality more than it reduces the file size. If you need smaller files, disable Guetzli, and enable <samp>Lossy</samp> mode instead.</li>
                     </ul>
                 </li>
+                <li>Added new languages: Arabic, Finnish, Slovak, Ukrainian</li>
             </ul>
             <p class="smallprint">This version requires at least macOS&nbsp;10.9 (Mavericks), and full functionality is only available in macOS&nbsp;10.10 (Yosemite) or later.</p>
           </section>

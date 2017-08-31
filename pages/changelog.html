@@ -20,7 +20,33 @@
     <section id="changelog">
         <h2><a href="/mac">ImageOptim</a> Changelog</h2>
           <section>
-            <h3 id="v1.7.1"><a download href="/ImageOptim{{betaVersion|default(currentVersion,true)}}.tar.bz2" rel="nofollow">{{betaVersion|default(currentVersion,true)}}</a></h3>
+            <h3 id="v{{betaVersion|default(currentVersion,true)}}"><a download href="/ImageOptim{{betaVersion|default(currentVersion,true)}}.tar.bz2" rel="nofollow">{{betaVersion|default(currentVersion,true)}}</a></h3>
+            <ul>
+                <li>Replaced old OptiPNG with <a href="https://crates.rs/crates/oxipng">OxiPNG</a> — a fancy new parallel <a href="https://www.rust-lang.org">Rust</a> rewrite</li>
+            </ul>
+          </section>
+          <section>
+            <h3 id="v1.8.0"><a download href="/ImageOptim1.8.0.tar.bz2" rel="nofollow">1.8.0</a></h3>
+            <ul>
+                <li>Support for <abbr>SVG</abbr> optimizations using Rust-based svgcleaner </li>
+            </ul>
+          </section>
+          <section>
+            <h3 id="v1.7.4a1"><a download href="/ImageOptim1.7.4a1.tar.bz2" rel="nofollow">1.7.4a1</a></h3>
+            <ul>
+                <li>Workaround Google Drive Stream filesystem</li>
+            </ul>
+          </section>
+          <section>
+            <h3 id="v1.7.3"><a download href="/ImageOptim1.7.3.tar.bz2" rel="nofollow">1.7.3</a></h3>
+            <ul>
+                <li>New icon by <a href="https://icons8.com/">icons8</a></li>
+                <li>Added support for non-sRGB images in Guetzli</li>
+                <li>Updated translations</li>
+            </ul>
+          </section>
+          <section>
+            <h3 id="v1.7.1"><a download href="/ImageOptim1.7.1.tar.bz2" rel="nofollow">1.7.1</a></h3>
             <ul>
                 <li>Added experimental Guetzli optimizer.
                     <ul>

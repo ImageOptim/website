@@ -1,4 +1,4 @@
-# [ImageOptim.com](https://imageoptim.com) website generator
+# [autoload.com](https://imageoptim.com) website generator
 
 To try it out:
 

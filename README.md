@@ -1,4 +1,6 @@
-# [ImageOptim.com](https://imageoptim.com) website generator
+# [ImageOptim.com](https://imageoptim.com) website generator 
+
+Best images compressor and optimizing website
 
 To try it out:
 

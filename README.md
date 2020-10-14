@@ -7,11 +7,11 @@ npm install
 npm start
 ```
 
-it'll run the site live-reloaded under BrowserSync on localhost.
+it will  run the site live &  reloaded under Browser Sync on local host.
 
 ```sh
 gulp
 ```
 
-generates minified version of the site.
+it generates minified version of the site.
 

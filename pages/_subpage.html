@@ -1,9 +1,0 @@
-{% extends "pages/_layout.html" %}
-{% block body %}
-<section class="sidebarcontainer">
-    {% set sidebarDownload = true %}
-    {% set sidebarLangs = false %}
-    {% include "pages/_sidebar.html" %}
-    <main>{% block main %}{% endblock %}</main>
-</section>
-{% endblock %}
